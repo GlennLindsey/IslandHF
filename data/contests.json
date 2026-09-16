@@ -1,0 +1,528 @@
+{
+  "source": "WA7BNM Contest Calendar",
+  "sourceURL": "https://www.contestcalendar.com/calendar.rss",
+  "updatedUTC": "2026-09-16T00:00:00Z",
+  "contestCount": 42,
+  "contests": [
+    {
+      "name": "Phone Weekly Test",
+      "description": "0230Z-0300Z, Sep 16",
+      "link": "https://www.contestcalendar.com/weeklycontdetails.php?ref=003f1gc1",
+      "guid": "https://www.contestcalendar.com/?g=00tlfqy0020666",
+      "sessions": [
+        {
+          "startUTC": "2026-09-16T02:30:00Z",
+          "endUTC": "2026-09-16T03:00:00Z"
+        }
+      ]
+    },
+    {
+      "name": "A1Club AWT",
+      "description": "1145Z-1300Z, Sep 16",
+      "link": "https://www.contestcalendar.com/weeklycontdetails.php?ref=003f2j0b",
+      "guid": "https://www.contestcalendar.com/?g=00tlggn0020671",
+      "sessions": [
+        {
+          "startUTC": "2026-09-16T11:45:00Z",
+          "endUTC": "2026-09-16T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "name": "CWops Test (CWT)",
+      "description": "1300Z-1400Z, Sep 16",
+      "link": "https://www.contestcalendar.com/weeklycontdetails.php?ref=003er5w2",
+      "guid": "https://www.contestcalendar.com/?g=00tlgk40020618",
+      "sessions": [
+        {
+          "startUTC": "2026-09-16T13:00:00Z",
+          "endUTC": "2026-09-16T14:00:00Z"
+        }
+      ]
+    },
+    {
+      "name": "VHF-UHF FT8 Activity Contest",
+      "description": "1700Z-2100Z, Sep 16",
+      "link": "https://www.contestcalendar.com/weeklycontdetails.php?ref=003eit3m",
+      "guid": "https://www.contestcalendar.com/?g=00tlgv80020579",
+      "sessions": [
+        {
+          "startUTC": "2026-09-16T17:00:00Z",
+          "endUTC": "2026-09-16T21:00:00Z"
+        }
+      ]
+    },
+    {
+      "name": "Mini-Test 40",
+      "description": "1700Z-1759Z, Sep 16",
+      "link": "https://www.contestcalendar.com/weeklycontdetails.php?ref=003f3ll3",
+      "guid": "https://www.contestcalendar.com/?g=00tlgv80020676",
+      "sessions": [
+        {
+          "startUTC": "2026-09-16T17:00:00Z",
+          "endUTC": "2026-09-16T17:59:00Z"
+        }
+      ]
+    },
+    {
+      "name": "Mini-Test 80",
+      "description": "1800Z-1859Z, Sep 16",
+      "link": "https://www.contestcalendar.com/weeklycontdetails.php?ref=003f4o60",
+      "guid": "https://www.contestcalendar.com/?g=00tlgy00020681",
+      "sessions": [
+        {
+          "startUTC": "2026-09-16T18:00:00Z",
+          "endUTC": "2026-09-16T18:59:00Z"
+        }
+      ]
+    },
+    {
+      "name": "RSGB 80m Autumn Series, CW",
+      "description": "1900Z-2030Z, Sep 16",
+      "link": "https://www.contestcalendar.com/weeklycontdetails.php?ref=003egnru",
+      "guid": "https://www.contestcalendar.com/?g=00tlh0s0020569",
+      "sessions": [
+        {
+          "startUTC": "2026-09-16T19:00:00Z",
+          "endUTC": "2026-09-16T20:30:00Z"
+        }
+      ]
+    },
+    {
+      "name": "CWops Test (CWT)",
+      "description": "1900Z-2000Z, Sep 16",
+      "link": "https://www.contestcalendar.com/weeklycontdetails.php?ref=003es8gy",
+      "guid": "https://www.contestcalendar.com/?g=00tlh0s0020623",
+      "sessions": [
+        {
+          "startUTC": "2026-09-16T19:00:00Z",
+          "endUTC": "2026-09-16T20:00:00Z"
+        }
+      ]
+    },
+    {
+      "name": "VHF-UHF FT8 Activity Contest-NA",
+      "description": "0000Z-0500Z, Sep 17",
+      "link": "https://www.contestcalendar.com/weeklycontdetails.php?ref=003ejgc0",
+      "guid": "https://www.contestcalendar.com/?g=00tlheo0020582",
+      "sessions": [
+        {
+          "startUTC": "2026-09-17T00:00:00Z",
+          "endUTC": "2026-09-17T05:00:00Z"
+        }
+      ]
+    },
+    {
+      "name": "Walk for the Bacon QRP Contest",
+      "description": "0000Z-0100Z, Sep 17 and 0200Z-0300Z, Sep 18",
+      "link": "https://www.contestcalendar.com/weeklycontdetails.php?ref=003ek3ez",
+      "guid": "https://www.contestcalendar.com/?g=00tlheo0020585",
+      "sessions": [
+        {
+          "startUTC": "2026-09-17T00:00:00Z",
+          "endUTC": "2026-09-17T01:00:00Z"
+        },
+        {
+          "startUTC": "2026-09-18T02:00:00Z",
+          "endUTC": "2026-09-18T03:00:00Z"
+        }
+      ]
+    },
+    {
+      "name": "NAQCC CW Sprint",
+      "description": "0030Z-0230Z, Sep 17",
+      "link": "https://www.contestcalendar.com/weeklycontdetails.php?ref=003eg0jq",
+      "guid": "https://www.contestcalendar.com/?g=00tlhg20020566",
+      "sessions": [
+        {
+          "startUTC": "2026-09-17T00:30:00Z",
+          "endUTC": "2026-09-17T02:30:00Z"
+        }
+      ]
+    },
+    {
+      "name": "CWops Test (CWT)",
+      "description": "0300Z-0400Z, Sep 17",
+      "link": "https://www.contestcalendar.com/weeklycontdetails.php?ref=003etb1u",
+      "guid": "https://www.contestcalendar.com/?g=00tlhn00020628",
+      "sessions": [
+        {
+          "startUTC": "2026-09-17T03:00:00Z",
+          "endUTC": "2026-09-17T04:00:00Z"
+        }
+      ]
+    },
+    {
+      "name": "CWops Test (CWT)",
+      "description": "0700Z-0800Z, Sep 17",
+      "link": "https://www.contestcalendar.com/weeklycontdetails.php?ref=003eu5wy",
+      "guid": "https://www.contestcalendar.com/?g=00tlhy40020632",
+      "sessions": [
+        {
+          "startUTC": "2026-09-17T07:00:00Z",
+          "endUTC": "2026-09-17T08:00:00Z"
+        }
+      ]
+    },
+    {
+      "name": "BCC QSO Party",
+      "description": "1800Z-1959Z, Sep 17",
+      "link": "https://www.contestcalendar.com/weeklycontdetails.php?ref=003em0o2",
+      "guid": "https://www.contestcalendar.com/?g=00tliso0020594",
+      "sessions": [
+        {
+          "startUTC": "2026-09-17T18:00:00Z",
+          "endUTC": "2026-09-17T19:59:00Z"
+        }
+      ]
+    },
+    {
+      "name": "NTC QSO Party",
+      "description": "1900Z-2000Z, Sep 17",
+      "link": "https://www.contestcalendar.com/weeklycontdetails.php?ref=003egg95",
+      "guid": "https://www.contestcalendar.com/?g=00tlivg0020568",
+      "sessions": [
+        {
+          "startUTC": "2026-09-17T19:00:00Z",
+          "endUTC": "2026-09-17T20:00:00Z"
+        }
+      ]
+    },
+    {
+      "name": "NCCC FT4 Sprint",
+      "description": "0100Z-0130Z, Sep 18",
+      "link": "https://www.contestcalendar.com/weeklycontdetails.php?ref=003f6lmt",
+      "guid": "https://www.contestcalendar.com/?g=00tljc40020690",
+      "sessions": [
+        {
+          "startUTC": "2026-09-18T01:00:00Z",
+          "endUTC": "2026-09-18T01:30:00Z"
+        }
+      ]
+    },
+    {
+      "name": "Weekly RTTY Test",
+      "description": "0145Z-0215Z, Sep 18",
+      "link": "https://www.contestcalendar.com/weeklycontdetails.php?ref=003f7gi9",
+      "guid": "https://www.contestcalendar.com/?g=00tlje70020694",
+      "sessions": [
+        {
+          "startUTC": "2026-09-18T01:45:00Z",
+          "endUTC": "2026-09-18T02:15:00Z"
+        }
+      ]
+    },
+    {
+      "name": "NCCC Sprint",
+      "description": "0230Z-0300Z, Sep 18",
+      "link": "https://www.contestcalendar.com/weeklycontdetails.php?ref=003f5q8c",
+      "guid": "https://www.contestcalendar.com/?g=00tljga0020686",
+      "sessions": [
+        {
+          "startUTC": "2026-09-18T02:30:00Z",
+          "endUTC": "2026-09-18T03:00:00Z"
+        }
+      ]
+    },
+    {
+      "name": "AGB NEMIGA Contest",
+      "description": "1600Z-1700Z, Sep 18",
+      "link": "https://www.contestcalendar.com/weeklycontdetails.php?ref=003ekayv",
+      "guid": "https://www.contestcalendar.com/?g=00tlkhs0020586",
+      "sessions": [
+        {
+          "startUTC": "2026-09-18T16:00:00Z",
+          "endUTC": "2026-09-18T17:00:00Z"
+        }
+      ]
+    },
+    {
+      "name": "K1USN Slow Speed Test",
+      "description": "2000Z-2100Z, Sep 18",
+      "link": "https://www.contestcalendar.com/weeklycontdetails.php?ref=003evvs9",
+      "guid": "https://www.contestcalendar.com/?g=00tlksw0020640",
+      "sessions": [
+        {
+          "startUTC": "2026-09-18T20:00:00Z",
+          "endUTC": "2026-09-18T21:00:00Z"
+        }
+      ]
+    },
+    {
+      "name": "FRAPR 10M Contest",
+      "description": "0000Z, Sep 19 to 2359Z, Sep 20",
+      "link": "https://www.contestcalendar.com/weeklycontdetails.php?ref=003cxd9m",
+      "guid": "https://www.contestcalendar.com/?g=00tll400020311",
+      "sessions": [
+        {
+          "startUTC": "2026-09-19T00:00:00Z",
+          "endUTC": "2026-09-20T23:59:00Z"
+        }
+      ]
+    },
+    {
+      "name": "ARRL 10 GHz and Up Contest",
+      "description": "0900Z, Sep 19 to 0759Z, Sep 21",
+      "link": "https://www.contestcalendar.com/weeklycontdetails.php?ref=003dqpug",
+      "guid": "https://www.contestcalendar.com/?g=00tllt00020448",
+      "sessions": [
+        {
+          "startUTC": "2026-09-19T09:00:00Z",
+          "endUTC": "2026-09-21T07:59:00Z"
+        }
+      ]
+    },
+    {
+      "name": "Scandinavian Activity Contest, CW",
+      "description": "1200Z, Sep 19 to 1200Z, Sep 20",
+      "link": "https://www.contestcalendar.com/weeklycontdetails.php?ref=003epfvd",
+      "guid": "https://www.contestcalendar.com/?g=00tlm1c0020610",
+      "sessions": [
+        {
+          "startUTC": "2026-09-19T12:00:00Z",
+          "endUTC": "2026-09-20T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "name": "Texas QSO Party",
+      "description": "1400Z, Sep 19 to 0200Z, Sep 20 and 1400Z-2000Z, Sep 20",
+      "link": "https://www.contestcalendar.com/weeklycontdetails.php?ref=003azws5",
+      "guid": "https://www.contestcalendar.com/?g=00tlm6w0019987",
+      "sessions": [
+        {
+          "startUTC": "2026-09-19T14:00:00Z",
+          "endUTC": "2026-09-20T02:00:00Z"
+        },
+        {
+          "startUTC": "2026-09-20T14:00:00Z",
+          "endUTC": "2026-09-20T20:00:00Z"
+        }
+      ]
+    },
+    {
+      "name": "Iowa QSO Party",
+      "description": "1400Z, Sep 19 to 0200Z, Sep 20",
+      "link": "https://www.contestcalendar.com/weeklycontdetails.php?ref=003b0rx0",
+      "guid": "https://www.contestcalendar.com/?g=00tlm6w0019991",
+      "sessions": [
+        {
+          "startUTC": "2026-09-19T14:00:00Z",
+          "endUTC": "2026-09-20T02:00:00Z"
+        }
+      ]
+    },
+    {
+      "name": "QRP Afield",
+      "description": "1500Z-2100Z, Sep 19",
+      "link": "https://www.contestcalendar.com/weeklycontdetails.php?ref=003eol0c",
+      "guid": "https://www.contestcalendar.com/?g=00tlm9o0020606",
+      "sessions": [
+        {
+          "startUTC": "2026-09-19T15:00:00Z",
+          "endUTC": "2026-09-19T21:00:00Z"
+        }
+      ]
+    },
+    {
+      "name": "New Hampshire QSO Party",
+      "description": "1600Z, Sep 19 to 0400Z, Sep 20 and 1200Z-2200Z, Sep 20",
+      "link": "https://www.contestcalendar.com/weeklycontdetails.php?ref=003b04g7",
+      "guid": "https://www.contestcalendar.com/?g=00tlmcg0019988",
+      "sessions": [
+        {
+          "startUTC": "2026-09-19T16:00:00Z",
+          "endUTC": "2026-09-20T04:00:00Z"
+        },
+        {
+          "startUTC": "2026-09-20T12:00:00Z",
+          "endUTC": "2026-09-20T22:00:00Z"
+        }
+      ]
+    },
+    {
+      "name": "Washington State Salmon Run",
+      "description": "1600Z, Sep 19 to 0700Z, Sep 20 and 1600Z-2400Z, Sep 20",
+      "link": "https://www.contestcalendar.com/weeklycontdetails.php?ref=003b0c7i",
+      "guid": "https://www.contestcalendar.com/?g=00tlmcg0019989",
+      "sessions": [
+        {
+          "startUTC": "2026-09-19T16:00:00Z",
+          "endUTC": "2026-09-20T07:00:00Z"
+        },
+        {
+          "startUTC": "2026-09-20T16:00:00Z",
+          "endUTC": "2026-09-21T00:00:00Z"
+        }
+      ]
+    },
+    {
+      "name": "Wisconsin Parks on the Air",
+      "description": "1600Z-2300Z, Sep 19",
+      "link": "https://www.contestcalendar.com/weeklycontdetails.php?ref=003eqb5c",
+      "guid": "https://www.contestcalendar.com/?g=00tlmcg0020614",
+      "sessions": [
+        {
+          "startUTC": "2026-09-19T16:00:00Z",
+          "endUTC": "2026-09-19T23:00:00Z"
+        }
+      ]
+    },
+    {
+      "name": "Feld Hell Sprint",
+      "description": "1800Z-1959Z, Sep 19",
+      "link": "https://www.contestcalendar.com/weeklycontdetails.php?ref=003efsw4",
+      "guid": "https://www.contestcalendar.com/?g=00tlmi00020565",
+      "sessions": [
+        {
+          "startUTC": "2026-09-19T18:00:00Z",
+          "endUTC": "2026-09-19T19:59:00Z"
+        }
+      ]
+    },
+    {
+      "name": "North American Sprint, RTTY",
+      "description": "0000Z-0400Z, Sep 20",
+      "link": "https://www.contestcalendar.com/weeklycontdetails.php?ref=003enxvv",
+      "guid": "https://www.contestcalendar.com/?g=00tlmyo0020603",
+      "sessions": [
+        {
+          "startUTC": "2026-09-20T00:00:00Z",
+          "endUTC": "2026-09-20T04:00:00Z"
+        }
+      ]
+    },
+    {
+      "name": "ARS Flight of the Bumblebees",
+      "description": "1700Z-2100Z, Sep 20",
+      "link": "https://www.contestcalendar.com/weeklycontdetails.php?ref=003ctxa4",
+      "guid": "https://www.contestcalendar.com/?g=00tlo9w0020295",
+      "sessions": [
+        {
+          "startUTC": "2026-09-20T17:00:00Z",
+          "endUTC": "2026-09-20T21:00:00Z"
+        }
+      ]
+    },
+    {
+      "name": "BARTG Sprint PSK63 Contest",
+      "description": "1700Z-2059Z, Sep 20",
+      "link": "https://www.contestcalendar.com/weeklycontdetails.php?ref=003elt5b",
+      "guid": "https://www.contestcalendar.com/?g=00tlo9w0020593",
+      "sessions": [
+        {
+          "startUTC": "2026-09-20T17:00:00Z",
+          "endUTC": "2026-09-20T20:59:00Z"
+        }
+      ]
+    },
+    {
+      "name": "Run for the Bacon QRP Contest",
+      "description": "2300Z, Sep 20 to 0100Z, Sep 21",
+      "link": "https://www.contestcalendar.com/weeklycontdetails.php?ref=003ehikx",
+      "guid": "https://www.contestcalendar.com/?g=00tloqk0020573",
+      "sessions": [
+        {
+          "startUTC": "2026-09-20T23:00:00Z",
+          "endUTC": "2026-09-21T01:00:00Z"
+        }
+      ]
+    },
+    {
+      "name": "K1USN Slow Speed Test",
+      "description": "0000Z-0100Z, Sep 21",
+      "link": "https://www.contestcalendar.com/weeklycontdetails.php?ref=003ev0x5",
+      "guid": "https://www.contestcalendar.com/?g=00tlotc0020636",
+      "sessions": [
+        {
+          "startUTC": "2026-09-21T00:00:00Z",
+          "endUTC": "2026-09-21T01:00:00Z"
+        }
+      ]
+    },
+    {
+      "name": "ICWC Medium Speed Test",
+      "description": "1300Z-1400Z, Sep 21",
+      "link": "https://www.contestcalendar.com/weeklycontdetails.php?ref=003ewqog",
+      "guid": "https://www.contestcalendar.com/?g=00tlptg0020644",
+      "sessions": [
+        {
+          "startUTC": "2026-09-21T13:00:00Z",
+          "endUTC": "2026-09-21T14:00:00Z"
+        }
+      ]
+    },
+    {
+      "name": "OK1WC Memorial (MWC)",
+      "description": "1630Z-1729Z, Sep 21",
+      "link": "https://www.contestcalendar.com/weeklycontdetails.php?ref=003eziyj",
+      "guid": "https://www.contestcalendar.com/?g=00tlq360020657",
+      "sessions": [
+        {
+          "startUTC": "2026-09-21T16:30:00Z",
+          "endUTC": "2026-09-21T17:29:00Z"
+        }
+      ]
+    },
+    {
+      "name": "ICWC Medium Speed Test",
+      "description": "1900Z-2000Z, Sep 21",
+      "link": "https://www.contestcalendar.com/weeklycontdetails.php?ref=003exljk",
+      "guid": "https://www.contestcalendar.com/?g=00tlqa40020648",
+      "sessions": [
+        {
+          "startUTC": "2026-09-21T19:00:00Z",
+          "endUTC": "2026-09-21T20:00:00Z"
+        }
+      ]
+    },
+    {
+      "name": "144 MHz Fall Sprint",
+      "description": "2300Z, Sep 21 to 0600Z, Sep 22",
+      "link": "https://www.contestcalendar.com/weeklycontdetails.php?ref=003dpfkx",
+      "guid": "https://www.contestcalendar.com/?g=00tlql80020442",
+      "sessions": [
+        {
+          "startUTC": "2026-09-21T23:00:00Z",
+          "endUTC": "2026-09-22T06:00:00Z"
+        }
+      ]
+    },
+    {
+      "name": "Worldwide Sideband Activity Contest",
+      "description": "0100Z-0159Z, Sep 22",
+      "link": "https://www.contestcalendar.com/weeklycontdetails.php?ref=003f0lj4",
+      "guid": "https://www.contestcalendar.com/?g=00tlqqs0020662",
+      "sessions": [
+        {
+          "startUTC": "2026-09-22T01:00:00Z",
+          "endUTC": "2026-09-22T01:59:00Z"
+        }
+      ]
+    },
+    {
+      "name": "ICWC Medium Speed Test",
+      "description": "0300Z-0400Z, Sep 22",
+      "link": "https://www.contestcalendar.com/weeklycontdetails.php?ref=003eyo4g",
+      "guid": "https://www.contestcalendar.com/?g=00tlqwc0020653",
+      "sessions": [
+        {
+          "startUTC": "2026-09-22T03:00:00Z",
+          "endUTC": "2026-09-22T04:00:00Z"
+        }
+      ]
+    },
+    {
+      "name": "Tuesday's Telegraphy Contest",
+      "description": "1930Z-2030Z, Sep 22",
+      "link": "https://www.contestcalendar.com/weeklycontdetails.php?ref=003f8j44",
+      "guid": "https://www.contestcalendar.com/?g=00tls660020699",
+      "sessions": [
+        {
+          "startUTC": "2026-09-22T19:30:00Z",
+          "endUTC": "2026-09-22T20:30:00Z"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+# Operating system
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Local development
+*.log
+
+# Temporary files
+*.tmp
+*.bak

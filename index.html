@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IslandHF — Amateur Radio from Vancouver Island</title>
+
+    <link rel="stylesheet" href="css/islandhf.css">
+</head>
+
+<body>
+
+    <main class="radio">
+
+        <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+        <header class="radio-header">
+
+            <div class="header-brand">
+
+                <div class="island-logo" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="brand-copy">
+
+                    <div class="brand-name">
+                        Island<span>HF</span>
+                    </div>
+
+                    <div class="brand-tagline">
+                        Amateur Radio from Vancouver Island
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <nav class="radio-nav">
+
+                <span>RADIO</span>
+                <span>PEOPLE</span>
+                <span>COMMUNITY</span>
+                <span>VANCOUVER ISLAND</span>
+
+            </nav>
+
+
+            <div class="header-scenery">
+
+                <div class="mountain mountain-1"></div>
+                <div class="mountain mountain-2"></div>
+                <div class="mountain mountain-3"></div>
+
+                <div class="water-lines"></div>
+
+            </div>
+
+
+            <div class="header-73">
+                73 — Good Radio, Good Friends
+            </div>
+
+        </header>
+
+
+        <!-- =====================================================
+         MAIN RADIO
+         ===================================================== -->
+
+        <section class="radio-body">
+
+
+            <!-- =================================================
+             LEFT PANEL
+             ================================================= -->
+
+            <aside class="left-panel">
+
+                <div class="speaker-grille">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
+
+
+                <div class="left-brand">
+                    IslandHF
+                </div>
+
+
+                <!-- POWER -->
+
+                <button class="power-button off" id="powerButton" type="button" aria-pressed="false">
+
+                    <span class="power-text">
+                        POWER
+                    </span>
+
+                    <span class="power-light" aria-hidden="true"></span>
+
+                </button>
+
+
+                <!-- PHONES -->
+
+                <div class="hardware-control">
+
+                    <div class="hardware-label">
+                        PHONES
+                    </div>
+
+                    <div class="phones-jack">
+                        <span></span>
+                    </div>
+
+                </div>
+
+
+                <!-- MIC -->
+
+                <div class="hardware-control">
+
+                    <div class="hardware-label">
+                        MIC
+                    </div>
+
+                    <div class="mic-jack">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+
+            <!-- =================================================
+             CENTER
+             ================================================= -->
+
+            <section class="display-section">
+
+                <div class="display-frame" id="displayFrame">
+
+                    <div class="radio-screen powered-off" id="radioScreen">
+
+                        <!-- DISPLAY HEADER -->
+
+                        <div class="screen-header">
+
+                            <div class="screen-title" id="screenTitle">
+                            </div>
+
+                            <div class="utc-clock" id="utcClock">
+                            </div>
+
+                        </div>
+
+
+                        <!-- DISPLAY BODY -->
+
+                        <div class="screen-content" id="screenContent">
+                        </div>
+
+
+                        <!-- WATERFALL -->
+
+                        <div class="waterfall" aria-hidden="true">
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+
+                        <div class="screen-prompt" id="screenPrompt">
+                            POWER OFF
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FREQUENCY -->
+
+                <div class="frequency-display">
+
+                    <span class="frequency-label">
+                        FREQUENCY
+                    </span>
+
+                    <span class="frequency-value">
+                        14.074.00
+                    </span>
+
+                    <span class="frequency-unit">
+                        MHz
+                    </span>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+             RIGHT PANEL
+             ================================================= -->
+
+            <aside class="right-panel">
+
+
+                <!-- SIX PHYSICAL BUTTONS -->
+
+                <div class="right-buttons">
+
+                    <button type="button">MENU</button>
+                    <button type="button">FUNCTION</button>
+
+                    <button type="button">M.SCOPE</button>
+                    <button type="button">QUICK</button>
+
+                    <button type="button">EXIT</button>
+                    <button type="button">SETUP</button>
+
+                </div>
+
+
+                <!-- MULTI -->
+
+                <div class="multi-control">
+
+                    <div class="multi-label">
+                        ◉ MULTI
+                    </div>
+
+                    <button class="tuning-knob" type="button" aria-label="Main tuning control">
+
+                        <span class="knob-marker"></span>
+                        <span class="knob-center"></span>
+
+                    </button>
+
+                    <div class="tuning-caption">
+                        MAIN TUNING
+                    </div>
+
+                </div>
+
+
+                <div class="right-motto">
+
+                    <span>DISCOVER</span>
+                    <span>COMMUNICATE</span>
+                    <span>EXPERIENCE</span>
+                    <span>AMATEUR RADIO</span>
+
+                </div>
+
+            </aside>
+
+        </section>
+
+
+        <!-- =====================================================
+         FIVE INFORMATION KNOBS
+         ===================================================== -->
+
+        <section class="function-bank" id="functionBank">
+
+
+            <!-- HF -->
+
+            <button class="info-control hf-control" data-section="hf" type="button" disabled aria-disabled="true">
+
+                <span class="knob"></span>
+
+                <span class="control-name">
+                    HF INFO
+                </span>
+
+                <span class="control-description">
+                    Bands • DX • Propagation
+                </span>
+
+            </button>
+
+
+            <!-- VHF -->
+
+            <button class="info-control vhf-control" data-section="vhf" type="button" disabled aria-disabled="true">
+
+                <span class="knob"></span>
+
+                <span class="control-name">
+                    VHF INFO
+                </span>
+
+                <span class="control-description">
+                    Repeaters • Nets • APRS
+                </span>
+
+            </button>
+
+
+            <!-- DIGITAL -->
+
+            <button class="info-control digital-control" data-section="digital" type="button" disabled
+                aria-disabled="true">
+
+                <span class="knob"></span>
+
+                <span class="control-name">
+                    DIGITAL INFO
+                </span>
+
+                <span class="control-description">
+                    FT8 • FT4 • Winlink
+                </span>
+
+            </button>
+
+
+            <!-- CLUB -->
+
+            <button class="info-control club-control" data-section="club" type="button" disabled aria-disabled="true">
+
+                <span class="knob"></span>
+
+                <span class="control-name">
+                    CLUB INFO
+                </span>
+
+                <span class="control-description">
+                    Meetings • Events • Photos
+                </span>
+
+            </button>
+
+
+            <!-- CONTEST -->
+
+            <button class="info-control contest-control" data-section="contest" type="button" disabled
+                aria-disabled="true">
+
+                <span class="knob"></span>
+
+                <span class="control-name">
+                    CONTEST INFO
+                </span>
+
+                <span class="control-description">
+                    Contests • Calendar • Results
+                </span>
+
+            </button>
+
+        </section>
+
+
+        <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+        <footer class="radio-footer">
+
+            <span>
+                IslandHF Radio Association
+            </span>
+
+            <span>
+                Vancouver Island, British Columbia, Canada
+            </span>
+
+            <span>
+                73 — Good Radio, Good Friends
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <!-- =========================================================
+     JAVASCRIPT
+     ========================================================= -->
+
+    <script src="js/data.js"></script>
+    <script src="js/display.js"></script>
+    <script src="js/radio.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1907 @@
+/* =========================================================
+   IslandHF Radio Association
+   Stage A — Physical Radio Interface
+   ========================================================= */
+
+:root {
+
+    --metal-dark: #090b0c;
+    --metal: #15191b;
+    --metal-light: #252b2e;
+
+    --panel: #171b1d;
+    --panel-light: #22272a;
+
+    --screen-dark: #011022;
+    --screen-blue: #062e5b;
+    --screen-line: #0877b4;
+
+    --white: #eef3f5;
+    --muted: #89969e;
+    --cyan: #19cfff;
+
+    --hf: #16a9ff;
+    --vhf: #39ed5b;
+    --digital: #ff9f0a;
+    --club: #a957ff;
+    --contest: #ff3838;
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+}
+
+body {
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(circle at 50% 20%,
+            #303638 0%,
+            #171a1c 45%,
+            #050607 100%);
+
+    color: var(--white);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+
+/* =========================================================
+   RADIO CHASSIS
+   ========================================================= */
+
+.radio {
+
+    width: min(1500px, 97vw);
+
+    margin: 8px auto;
+
+    background:
+        linear-gradient(145deg,
+            #2b3032,
+            #111416 55%,
+            #080a0b);
+
+    border: 1px solid #4a5054;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 22px 60px rgba(0, 0, 0, 0.75),
+        inset 0 1px rgba(255, 255, 255, 0.09);
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.radio-header {
+
+    position: relative;
+
+    height: 108px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 12px 28px;
+
+    overflow: hidden;
+
+    border-bottom: 2px solid #07090a;
+
+    background:
+        linear-gradient(180deg,
+            #1e2529,
+            #101518);
+}
+
+
+/* ---------------------------------------------------------
+   Brand
+   --------------------------------------------------------- */
+
+.header-brand {
+
+    position: relative;
+
+    z-index: 5;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    min-width: 380px;
+}
+
+.island-logo {
+
+    position: relative;
+
+    width: 76px;
+    height: 55px;
+
+    flex-shrink: 0;
+}
+
+.island-logo span {
+
+    position: absolute;
+
+    bottom: 0;
+
+    width: 0;
+    height: 0;
+
+    border-left: 28px solid transparent;
+    border-right: 28px solid transparent;
+    border-bottom: 48px solid #138bc9;
+}
+
+.island-logo span:nth-child(1) {
+    left: 0;
+}
+
+.island-logo span:nth-child(2) {
+
+    left: 22px;
+
+    border-bottom-color: #1db5ed;
+
+    transform: scale(0.8);
+}
+
+.island-logo span:nth-child(3) {
+
+    left: 39px;
+
+    border-bottom-color: #36c9ef;
+
+    transform: scale(0.62);
+}
+
+
+.brand-name {
+
+    font-size: clamp(2.5rem, 4vw, 4rem);
+
+    line-height: 0.85;
+
+    font-weight: 700;
+
+    letter-spacing: -0.05em;
+}
+
+.brand-name span {
+    color: var(--cyan);
+}
+
+.brand-tagline {
+
+    margin-top: 9px;
+
+    color: #d5dce0;
+
+    font-size: 0.88rem;
+}
+
+
+/* ---------------------------------------------------------
+   Navigation
+   --------------------------------------------------------- */
+
+.radio-nav {
+
+    position: relative;
+
+    z-index: 6;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+
+    margin-left: 25px;
+
+    color: var(--cyan);
+
+    font-size: 0.72rem;
+
+    line-height: 1.25;
+
+    letter-spacing: 0.03em;
+}
+
+
+/* ---------------------------------------------------------
+   Scenery
+   --------------------------------------------------------- */
+
+/* ---------------------------------------------------------
+   Vancouver Island header scenery
+   --------------------------------------------------------- */
+
+.header-scenery {
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 62%;
+    height: 100%;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(180deg,
+            #173f63 0%,
+            #0d2b48 48%,
+            #071925 100%);
+}
+
+
+/* Evening glow */
+
+.header-scenery::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 8px;
+    left: 48%;
+
+    width: 150px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(ellipse,
+            rgba(255, 190, 100, 0.42),
+            rgba(255, 160, 70, 0.12) 45%,
+            transparent 75%);
+
+    filter: blur(8px);
+}
+
+
+/* Mountain range */
+
+.mountain {
+
+    position: absolute;
+
+    bottom: 25px;
+
+    width: 0;
+    height: 0;
+
+    border-left: 125px solid transparent;
+    border-right: 125px solid transparent;
+
+    border-bottom: 105px solid #172d3d;
+
+    filter:
+        drop-shadow(0 -3px 5px rgba(20, 150, 210, 0.18));
+}
+
+
+/* Far mountain */
+
+.mountain-1 {
+
+    left: 8%;
+
+    transform: scale(0.85);
+
+    border-bottom-color: #12344d;
+}
+
+
+/* Main mountain */
+
+.mountain-2 {
+
+    left: 38%;
+
+    transform: scale(1.25);
+
+    border-bottom-color: #0b202f;
+}
+
+
+/* Right mountain */
+
+.mountain-3 {
+
+    left: 67%;
+
+    transform: scale(1.0);
+
+    border-bottom-color: #102a3a;
+}
+
+
+/* Snow/highlight ridge */
+
+.header-scenery::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 5%;
+    right: 5%;
+
+    bottom: 46px;
+
+    height: 3px;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            rgba(54, 178, 225, 0.55),
+            rgba(54, 178, 225, 0.25),
+            transparent);
+}
+
+
+/* Ocean */
+
+.water-lines {
+
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 34px;
+
+    background:
+        repeating-linear-gradient(0deg,
+            transparent 0,
+            transparent 5px,
+            rgba(23, 159, 216, 0.5) 6px,
+            transparent 7px);
+
+    opacity: 0.85;
+}
+
+
+/* 73 in scenic area */
+
+.header-73 {
+
+    position: absolute;
+
+    right: 20px;
+    bottom: 11px;
+
+    z-index: 8;
+
+    color: #d8f2f8;
+
+    font-size: 0.66rem;
+
+    text-shadow:
+        0 1px 3px #000;
+}
+
+
+/* =========================================================
+   MAIN BODY
+   ========================================================= */
+
+.radio-body {
+
+    display: grid;
+
+    grid-template-columns:
+        235px minmax(0, 1fr) 275px;
+
+    min-height: 480px;
+
+    background:
+        linear-gradient(90deg,
+            #181c1e,
+            #0d1012 50%,
+            #181c1e);
+}
+
+
+/* =========================================================
+   LEFT PANEL
+   ========================================================= */
+
+.left-panel {
+
+    padding: 18px 18px;
+
+    border-right: 1px solid #343a3d;
+
+    background:
+        linear-gradient(180deg,
+            #202528,
+            #111416);
+
+    text-align: center;
+}
+
+
+/* ---------------------------------------------------------
+   Speaker
+   --------------------------------------------------------- */
+
+.speaker-grille {
+
+    height: 145px;
+
+    padding: 10px;
+
+    margin-bottom: 12px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    border: 1px solid #080a0b;
+
+    border-radius: 6px;
+
+    background: #080a0b;
+
+    box-shadow:
+        inset 0 0 12px #000;
+}
+
+.speaker-grille span {
+
+    display: block;
+
+    height: 5px;
+
+    border-radius: 3px;
+
+    background:
+        linear-gradient(180deg,
+            #3e4447,
+            #171a1c);
+
+    box-shadow:
+        0 1px #050607;
+}
+
+
+/* ---------------------------------------------------------
+   Left branding
+   --------------------------------------------------------- */
+
+.left-brand {
+
+    margin: 5px 0 12px;
+
+    color: #cdd4d8;
+
+    font-size: 1.5rem;
+
+    text-align: left;
+}
+
+
+/* =========================================================
+   POWER
+   ========================================================= */
+
+.power-button {
+
+    width: 130px;
+
+    height: 54px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 5px;
+
+    border: 1px solid #31553b;
+
+    border-radius: 7px;
+
+    background:
+        linear-gradient(180deg,
+            #202426,
+            #0c0f10);
+
+    color: var(--white);
+
+    cursor: pointer;
+
+    box-shadow:
+        inset 0 1px rgba(255, 255, 255, 0.08),
+        0 5px 12px rgba(0, 0, 0, 0.65);
+}
+
+.power-text {
+
+    order: 1;
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+}
+
+.power-light {
+
+    order: 0;
+
+    width: 58px;
+    height: 8px;
+
+    border-radius: 5px;
+
+    background: #ef3030;
+
+    box-shadow:
+        0 0 8px rgba(255, 40, 40, 0.8);
+}
+
+.power-button:not(.off) {
+
+    border-color: #2ba348;
+
+    box-shadow:
+        0 0 15px rgba(47, 220, 82, 0.35),
+        inset 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.power-button:not(.off) .power-light {
+
+    background: #42ed68;
+
+    box-shadow:
+        0 0 12px rgba(50, 255, 90, 1);
+}
+
+
+/* =========================================================
+   PHONES / MIC
+   ========================================================= */
+
+.hardware-control {
+
+    margin-top: 10px;
+
+    text-align: center;
+}
+
+.hardware-label {
+
+    margin-bottom: 5px;
+
+    color: #c3cbd0;
+
+    font-size: 0.68rem;
+}
+
+.phones-jack {
+
+    width: 48px;
+    height: 48px;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            #050607 0 28%,
+            #9c6a27 30% 38%,
+            #050607 41% 58%,
+            #34393c 60% 65%,
+            #080a0b 68%);
+
+    box-shadow:
+        0 4px 9px rgba(0, 0, 0, 0.8);
+}
+
+.mic-jack {
+
+    position: relative;
+
+    width: 58px;
+    height: 58px;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    border: 3px solid #383e41;
+
+    background:
+        radial-gradient(circle,
+            #111416,
+            #050607 70%);
+
+    box-shadow:
+        inset 0 0 9px #000,
+        0 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+.mic-jack span {
+
+    position: absolute;
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #c18a3e;
+}
+
+.mic-jack span:nth-child(1) {
+    top: 10px;
+    left: 16px;
+}
+
+.mic-jack span:nth-child(2) {
+    top: 10px;
+    right: 16px;
+}
+
+.mic-jack span:nth-child(3) {
+    top: 25px;
+    left: 10px;
+}
+
+.mic-jack span:nth-child(4) {
+    top: 25px;
+    left: 26px;
+}
+
+.mic-jack span:nth-child(5) {
+    top: 25px;
+    right: 10px;
+}
+
+.mic-jack span:nth-child(6) {
+    bottom: 9px;
+    left: 17px;
+}
+
+.mic-jack span:nth-child(7) {
+    bottom: 9px;
+    right: 17px;
+}
+
+
+/* =========================================================
+   CENTER DISPLAY
+   ========================================================= */
+
+.display-section {
+
+    min-width: 0;
+
+    padding: 30px 20px 14px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+/* ---------------------------------------------------------
+   Display frame
+   --------------------------------------------------------- */
+
+.display-frame {
+
+    padding: 10px;
+
+    border: 2px solid #383e42;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(145deg,
+            #1b2023,
+            #080a0b);
+
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.75),
+        inset 0 1px rgba(255, 255, 255, 0.06);
+}
+
+
+/* ---------------------------------------------------------
+   Screen
+   --------------------------------------------------------- */
+
+.radio-screen {
+
+    position: relative;
+
+    height: 325px;
+
+    overflow: hidden;
+
+    border: 1px solid #0d1d26;
+
+    border-radius: 5px;
+
+    background:
+        radial-gradient(ellipse at 50% 35%,
+            #06366a,
+            #021b3b 55%,
+            #010a17 100%);
+
+    color: #dff6ff;
+
+    box-shadow:
+        inset 0 0 30px rgba(0, 0, 0, 0.85);
+}
+
+.radio-screen::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        repeating-linear-gradient(0deg,
+            rgba(255, 255, 255, 0.018) 0,
+            rgba(255, 255, 255, 0.018) 1px,
+            transparent 1px,
+            transparent 4px);
+}
+
+.radio-screen.powered-off {
+
+    background:
+        radial-gradient(ellipse,
+            #050607,
+            #010203);
+
+    color: #182023;
+}
+
+
+/* ---------------------------------------------------------
+   Screen header
+   --------------------------------------------------------- */
+
+.screen-header {
+
+    position: relative;
+
+    z-index: 3;
+
+    height: 48px;
+
+    padding: 0 13px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-bottom: 1px solid rgba(22, 169, 255, 0.55);
+}
+
+.screen-title {
+
+    color: #a9e9ff;
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.03em;
+}
+
+.utc-clock {
+
+    color: #c7efff;
+
+    font-family: monospace;
+
+    font-size: 0.78rem;
+}
+
+
+/* ---------------------------------------------------------
+   Screen content
+   --------------------------------------------------------- */
+
+.screen-content {
+
+    position: relative;
+
+    z-index: 3;
+
+    height: 235px;
+
+    padding: 15px 15px 55px;
+
+    overflow: hidden;
+}
+
+.screen-prompt {
+
+    position: absolute;
+
+    z-index: 4;
+
+    bottom: 9px;
+    left: 13px;
+
+    color: #65b6dc;
+
+    font-family: monospace;
+
+    font-size: 0.63rem;
+
+    letter-spacing: 0.08em;
+}
+
+/* =========================================================
+   DISPLAY CONTENT AREA
+   Reserve space for the waterfall
+   ========================================================= */
+
+.section-display {
+
+    box-sizing: border-box;
+
+    width: 100%;
+
+    padding-bottom: 48px;
+
+    overflow: hidden;
+}
+
+/* =========================================================
+   WATERFALL
+   ========================================================= */
+
+.waterfall {
+
+    position: absolute;
+
+    z-index: 2;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 42px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    gap: 2px;
+
+    padding: 0 8px;
+
+    border-top: 1px solid rgba(21, 148, 218, 0.5);
+
+    background:
+        linear-gradient(180deg,
+            transparent,
+            rgba(0, 77, 140, 0.35));
+}
+
+.waterfall span {
+
+    flex: 1;
+
+    height: 10px;
+
+    background:
+        linear-gradient(180deg,
+            #4ce8ff,
+            #0874d8);
+
+    opacity: 0.8;
+}
+
+.waterfall span:nth-child(3n) {
+    height: 25px;
+}
+
+.waterfall span:nth-child(5n) {
+    height: 35px;
+}
+
+.waterfall span:nth-child(7n) {
+    height: 17px;
+}
+
+
+/* =========================================================
+   WELCOME DISPLAY
+   ========================================================= */
+
+.welcome-screen h2,
+.section-display h2 {
+
+    margin: 0 0 5px;
+
+    color: #b9edff;
+
+    font-size: 1.45rem;
+}
+
+.welcome-screen p,
+.section-intro {
+
+    margin: 7px 0;
+
+    color: #d5e9f0;
+
+    font-size: 0.82rem;
+}
+
+.welcome-message {
+
+    margin-top: 15px;
+
+    color: #79cce9;
+
+    font-size: 0.82rem;
+}
+
+.section-subtitle {
+
+    color: #55d9ff;
+
+    font-size: 0.75rem;
+}
+
+.info-cards {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 6px;
+
+    margin-top: 12px;
+}
+
+.info-card {
+
+    min-height: 45px;
+
+    padding: 7px 9px;
+
+    border-left: 2px solid var(--cyan);
+
+    background:
+        rgba(0, 24, 55, 0.72);
+}
+
+.info-card strong {
+
+    display: block;
+
+    color: #e9f7fb;
+
+    font-size: 0.75rem;
+}
+
+.info-card span {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color: #81c9e4;
+
+    font-size: 0.62rem;
+}
+
+.contest-status {
+
+    margin-top: 10px;
+
+    padding: 9px;
+
+    border-left: 3px solid var(--contest);
+
+    background:
+        rgba(0, 22, 48, 0.8);
+}
+
+.contest-status strong {
+
+    display: block;
+
+    font-size: 0.75rem;
+}
+
+.contest-status span {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color: #83c8e3;
+
+    font-size: 0.62rem;
+}
+
+
+/* =========================================================
+   FREQUENCY
+   ========================================================= */
+
+.frequency-display {
+
+    height: 57px;
+
+    margin-top: 10px;
+
+    padding: 0 15px;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 10px;
+
+    border: 1px solid #343b3f;
+
+    border-radius: 6px;
+
+    background:
+        linear-gradient(180deg,
+            #24282a,
+            #101315);
+}
+
+.frequency-label {
+
+    color: #79858c;
+
+    font-size: 0.63rem;
+
+    letter-spacing: 0.12em;
+}
+
+.frequency-value {
+
+    color: #b9efff;
+
+    font-family: monospace;
+
+    font-size: clamp(1.7rem, 3vw, 2.4rem);
+
+    letter-spacing: 0.06em;
+}
+
+.frequency-unit {
+
+    color: #7f8a90;
+
+    font-family: monospace;
+
+    font-size: 0.7rem;
+}
+
+
+/* =========================================================
+   RIGHT PANEL
+   ========================================================= */
+
+.right-panel {
+
+    padding: 18px 16px;
+
+    border-left: 1px solid #343a3d;
+
+    background:
+        linear-gradient(180deg,
+            #202527,
+            #111416);
+}
+
+
+/* =========================================================
+   RIGHT BUTTONS
+   ========================================================= */
+
+.right-buttons {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+    padding: 3px;
+}
+
+.right-buttons button {
+
+    height: 42px;
+
+    border: 1px solid #444b4f;
+
+    border-radius: 5px;
+
+    background:
+        linear-gradient(180deg,
+            #292e31,
+            #15191b);
+
+    color: #e7ecef;
+
+    font-size: 0.72rem;
+
+    cursor: pointer;
+
+    box-shadow:
+        inset 0 1px rgba(255, 255, 255, 0.08),
+        0 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+.right-buttons button:active {
+
+    transform: translateY(1px);
+
+    background:
+        linear-gradient(180deg,
+            #141719,
+            #292e31);
+}
+
+
+/* =========================================================
+   MULTI / TUNING
+   ========================================================= */
+
+.multi-control {
+
+    margin-top: 12px;
+
+    text-align: center;
+}
+
+.multi-label {
+
+    margin-bottom: 6px;
+
+    color: #cbd3d7;
+
+    font-size: 0.72rem;
+
+    letter-spacing: 0.04em;
+}
+
+.tuning-knob {
+
+    position: relative;
+
+    width: 175px;
+    height: 175px;
+
+    border: 9px solid #07090a;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle at 38% 30%,
+            #4b5154,
+            #252a2d 27%,
+            #101315 58%,
+            #050607 72%,
+            #292e31 74%,
+            #080a0b 100%);
+
+    box-shadow:
+        0 12px 25px rgba(0, 0, 0, 0.8),
+        inset 2px 2px 7px rgba(255, 255, 255, 0.13),
+        inset -8px -8px 14px rgba(0, 0, 0, 0.9);
+
+    cursor: pointer;
+}
+
+.tuning-knob::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 14px;
+
+    border: 2px solid #565e62;
+
+    border-radius: 50%;
+
+    box-shadow:
+        inset 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.knob-marker {
+
+    position: absolute;
+
+    top: 14px;
+    left: 50%;
+
+    width: 6px;
+    height: 34px;
+
+    transform: translateX(-50%);
+
+    border-radius: 4px;
+
+    background: #d8dfe2;
+
+    box-shadow:
+        0 0 5px rgba(255, 255, 255, 0.4);
+}
+
+.knob-center {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 48px;
+    height: 48px;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    border: 2px solid #555c60;
+
+    background:
+        radial-gradient(circle at 35% 30%,
+            #565d60,
+            #151819 70%);
+
+    box-shadow:
+        inset 2px 2px 5px rgba(255, 255, 255, 0.15),
+        0 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+.tuning-caption {
+
+    margin-top: 8px;
+
+    color: #9aa5ab;
+
+    font-size: 0.67rem;
+
+    letter-spacing: 0.15em;
+}
+
+.right-motto {
+
+    margin: 20px 0 0 12px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+
+    color: #c7d0d4;
+
+    font-size: 0.68rem;
+
+    line-height: 1.25;
+}
+
+
+/* =========================================================
+   FIVE INFORMATION CONTROLS
+   ========================================================= */
+
+.function-bank {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    min-height: 175px;
+
+    padding: 12px 30px 14px;
+
+    border-top: 1px solid #353b3e;
+
+    border-bottom: 1px solid #303538;
+
+    background:
+        linear-gradient(180deg,
+            #15191b,
+            #090b0c);
+}
+
+.info-control {
+
+    min-width: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    color: var(--white);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    cursor: pointer;
+}
+
+.info-control:disabled {
+
+    cursor: default;
+
+    opacity: 0.28;
+}
+
+.info-control:not(:disabled) {
+
+    opacity: 1;
+}
+
+
+/* =========================================================
+   SMALL KNOBS
+   ========================================================= */
+
+.knob {
+
+    position: relative;
+
+    width: 72px;
+    height: 72px;
+
+    border: 4px solid #07090a;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle at 35% 28%,
+            #4a5054,
+            #262b2e 28%,
+            #111416 65%,
+            #070809 100%);
+
+    box-shadow:
+        inset 2px 2px 5px rgba(255, 255, 255, 0.13),
+        inset -6px -6px 10px rgba(0, 0, 0, 0.9);
+}
+
+.knob::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 7px;
+
+    border: 2px solid #555d61;
+
+    border-radius: 50%;
+}
+
+.knob::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 11px;
+    left: 50%;
+
+    width: 5px;
+    height: 23px;
+
+    transform: translateX(-50%);
+
+    border-radius: 4px;
+
+    background: #d9dfe2;
+}
+
+
+/* =========================================================
+   KNOB LIGHTING
+   ========================================================= */
+
+.hf-control .knob {
+
+    box-shadow:
+        0 0 22px rgba(22, 169, 255, 0.7),
+        inset 2px 2px 5px rgba(255, 255, 255, 0.13),
+        inset -6px -6px 10px rgba(0, 0, 0, 0.9);
+}
+
+.vhf-control .knob {
+
+    box-shadow:
+        0 0 22px rgba(57, 237, 91, 0.7),
+        inset 2px 2px 5px rgba(255, 255, 255, 0.13),
+        inset -6px -6px 10px rgba(0, 0, 0, 0.9);
+}
+
+.digital-control .knob {
+
+    box-shadow:
+        0 0 22px rgba(255, 159, 10, 0.7),
+        inset 2px 2px 5px rgba(255, 255, 255, 0.13),
+        inset -6px -6px 10px rgba(0, 0, 0, 0.9);
+}
+
+.club-control .knob {
+
+    box-shadow:
+        0 0 22px rgba(169, 87, 255, 0.7),
+        inset 2px 2px 5px rgba(255, 255, 255, 0.13),
+        inset -6px -6px 10px rgba(0, 0, 0, 0.9);
+}
+
+.contest-control .knob {
+
+    box-shadow:
+        0 0 22px rgba(255, 56, 56, 0.7),
+        inset 2px 2px 5px rgba(255, 255, 255, 0.13),
+        inset -6px -6px 10px rgba(0, 0, 0, 0.9);
+}
+
+
+/* =========================================================
+   LABELS
+   ========================================================= */
+
+.control-name {
+
+    font-size: 0.72rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.05em;
+
+    white-space: nowrap;
+}
+
+.control-description {
+
+    max-width: 175px;
+
+    color: #89969d;
+
+    font-size: 0.57rem;
+
+    line-height: 1.25;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.radio-footer {
+
+    min-height: 48px;
+
+    padding: 10px 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background:
+        linear-gradient(180deg,
+            #15191b,
+            #0b0d0e);
+
+    color: #91a0a8;
+
+    font-size: 0.65rem;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .radio {
+
+        width: 99vw;
+
+        margin: 4px auto;
+    }
+
+    .radio-body {
+
+        grid-template-columns:
+            190px minmax(0, 1fr) 225px;
+    }
+
+    .header-brand {
+
+        min-width: 320px;
+    }
+
+    .island-logo {
+
+        display: none;
+    }
+
+    .radio-nav {
+
+        margin-left: 10px;
+    }
+
+    .left-panel {
+
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .right-panel {
+
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .tuning-knob {
+
+        width: 145px;
+        height: 145px;
+    }
+
+    .function-bank {
+
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+
+/* =========================================================
+   PHONE
+   ========================================================= */
+
+@media (max-width: 750px) {
+
+    body {
+
+        background: #080a0b;
+    }
+
+    .radio {
+
+        width: 100%;
+
+        margin: 0;
+
+        border-radius: 0;
+    }
+
+    .radio-header {
+
+        height: 90px;
+
+        padding: 10px 15px;
+    }
+
+    .brand-name {
+
+        font-size: 2.2rem;
+    }
+
+    .brand-tagline {
+
+        font-size: 0.7rem;
+    }
+
+    .radio-nav,
+    .header-scenery,
+    .header-73 {
+
+        display: none;
+    }
+
+    .radio-body {
+
+        display: block;
+
+        min-height: auto;
+    }
+
+    .left-panel,
+    .right-panel {
+
+        display: none;
+    }
+
+    .display-section {
+
+        padding: 15px 10px;
+    }
+
+    .radio-screen {
+
+        height: 300px;
+    }
+
+    .function-bank {
+
+        display: flex;
+
+        overflow-x: auto;
+
+        justify-content: flex-start;
+
+        gap: 18px;
+
+        padding: 12px 18px;
+    }
+
+    .info-control {
+
+        flex: 0 0 105px;
+    }
+
+    .radio-footer {
+
+        flex-direction: column;
+
+        gap: 5px;
+
+        text-align: center;
+    }
+}
+
+/* =========================================================
+   CONTEST DISPLAY — RADIO STYLE
+   ========================================================= */
+
+.contest-display {
+    height: 100%;
+    overflow: hidden;
+}
+
+.contest-display h2 {
+    margin: 0 0 4px;
+    color: #b9edff;
+    font-size: 1.45rem;
+}
+
+.contest-source {
+    margin-bottom: 8px;
+    color: #55d9ff;
+    font-size: 0.72rem;
+}
+
+.contest-list {
+    height: 175px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+/* Scrollbar */
+
+.contest-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.contest-list::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.contest-list::-webkit-scrollbar-thumb {
+    background: #0877b4;
+    border-radius: 4px;
+}
+
+/* Individual contest */
+
+.contest-row {
+    display: grid;
+    grid-template-columns: 58px minmax(0, 1fr);
+    min-height: 48px;
+    margin-bottom: 5px;
+
+    border-left: 3px solid #e6b83f;
+
+    background:
+        linear-gradient(90deg,
+            rgba(0, 35, 70, 0.95),
+            rgba(0, 20, 45, 0.78));
+
+    box-shadow:
+        inset 0 1px rgba(255, 255, 255, 0.025);
+}
+
+/* Date */
+
+.contest-date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 4px;
+
+    color: #e5edf1;
+    font-size: 0.66rem;
+    line-height: 1.15;
+    text-align: center;
+}
+
+.contest-date .month {
+    color: #d8e8ee;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.contest-date .days {
+    color: #ffffff;
+    font-size: 0.76rem;
+    font-weight: 700;
+}
+
+/* Main contest information */
+
+.contest-details {
+    min-width: 0;
+    padding: 6px 8px;
+}
+
+.contest-name {
+    display: block;
+
+    overflow: hidden;
+
+    color: #e9f7fb;
+    font-size: 0.73rem;
+    font-weight: 700;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.contest-time {
+    margin-top: 2px;
+
+    color: #65c9ef;
+    font-family: monospace;
+    font-size: 0.61rem;
+}
+
+.contest-meta {
+    margin-top: 2px;
+
+    color: #8cc6dd;
+    font-size: 0.59rem;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Contest currently in progress */
+
+.contest-row.active {
+    border-left-color: #ff3838;
+
+    background:
+        linear-gradient(90deg,
+            rgba(45, 10, 15, 0.9),
+            rgba(0, 25, 50, 0.82));
+}
+
+.contest-row.active .contest-name::before {
+    content: "ON NOW — ";
+    color: #ff6262;
+}
+
+/* Starting soon */
+
+.contest-row.soon {
+    border-left-color: #ffb52e;
+}
+
+.contest-row.soon .contest-name::before {
+    content: "SOON — ";
+    color: #ffc34d;
+}
+
+/* =========================================================
+   CONTEST DISPLAY — SMALLER SCREENS
+   ========================================================= */
+
+@media (max-width: 750px) {
+
+    .contest-list {
+        height: 175px;
+    }
+
+    .contest-row {
+        grid-template-columns: 50px minmax(0, 1fr);
+    }
+
+    .contest-name {
+        font-size: 0.68rem;
+    }
+
+    .contest-time {
+        font-size: 0.58rem;
+    }
+
+    .contest-meta {
+        font-size: 0.55rem;
+    }
+}
