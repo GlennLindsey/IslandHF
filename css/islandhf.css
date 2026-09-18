@@ -1487,8 +1487,7 @@ body {
         inset -6px -6px 10px rgba(0, 0, 0, 0.9);
 }
 
-.digital-control .knob {
-
+.propagation-control .knob {
     box-shadow:
         0 0 22px rgba(255, 159, 10, 0.7),
         inset 2px 2px 5px rgba(255, 255, 255, 0.13),

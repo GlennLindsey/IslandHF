@@ -1,7 +1,3 @@
-const controls = document.querySelectorAll(".info-control");
-const powerButton = document.getElementById("powerButton");
-const functionBank = document.getElementById("functionBank");
-
 
 function isPoweredOn() {
     return !powerButton.classList.contains("off");
