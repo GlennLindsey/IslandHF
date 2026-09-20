@@ -694,7 +694,7 @@ async function renderContestInfo() {
    GENERIC SECTION DISPLAY
    ========================================================= */
 
-function renderSection(section) {
+async function renderSection(section) {
 
     if (section === "contest") {
 
@@ -703,6 +703,213 @@ function renderSection(section) {
         return;
     }
 
+    if (section === "propagation") {
+
+        screenTitle.textContent = "PROPAGATION INFO";
+
+        screenContent.innerHTML = `
+            <div class="section-display">
+
+                <h2>PROPAGATION INFO</h2>
+
+                <div class="section-subtitle">
+                    Solar Activity • HF Conditions
+                </div>
+
+                <div class="info-cards">
+
+                    <div class="info-card">
+                        <strong>SOLAR FLUX (10.7 cm)</strong>
+                        <span>Loading...</span>
+                    </div>
+
+                    <div class="info-card">
+                        <strong>K-INDEX</strong>
+                        <span>Loading...</span>
+                    </div>
+
+                </div>
+
+            </div>
+        `;
+
+        screenPrompt.textContent =
+            "RETRIEVING LIVE NOAA DATA";
+
+        try {
+
+            const fluxResponse = await fetch(
+                "https://services.swpc.noaa.gov/json/f107_cm_flux.json"
+            );
+
+            const kResponse = await fetch(
+                "https://services.swpc.noaa.gov/json/planetary_k_index_1m.json"
+            );
+
+            const kc2gResponse = await fetch(
+                "data/kc2g.json"
+            );
+
+            if (!kc2gResponse.ok) {
+                throw new Error("KC2G data unavailable");
+            }
+
+            const kc2gData = await kc2gResponse.json();
+
+            const fluxData = await fluxResponse.json();
+            const kData = await kResponse.json();
+
+            const latestFlux = fluxData[0];
+            const latestK = kData[kData.length - 1];
+
+            let geomagnetic;
+
+            const kp = Number(latestK.kp_index);
+
+            if (kp < 3) {
+                geomagnetic = "QUIET";
+            } else if (kp < 4) {
+                geomagnetic = "UNSETTLED";
+            } else if (kp < 5) {
+                geomagnetic = "ACTIVE";
+            } else if (kp < 6) {
+                geomagnetic = "G1 MINOR STORM";
+            } else if (kp < 7) {
+                geomagnetic = "G2 MODERATE STORM";
+            } else if (kp < 8) {
+                geomagnetic = "G3 STRONG STORM";
+            } else if (kp < 9) {
+                geomagnetic = "G4 SEVERE STORM";
+            } else {
+                geomagnetic = "G5 EXTREME STORM";
+            }
+
+            screenContent.innerHTML = `
+                <div class="section-display">
+
+                    <h2>PROPAGATION INFO</h2>
+
+                    <div class="section-subtitle">
+                        Solar Activity • HF Conditions
+                    </div>
+
+                    <div class="info-cards">
+
+                        <div class="info-card">
+                            <strong>SOLAR FLUX (10.7 cm)</strong>
+                            <span>${latestFlux.flux}</span>
+                        </div>
+
+                        <div class="info-card">
+                            <strong>K-INDEX</strong>
+                            <span>${latestK.kp_index}</span>
+                        </div>
+
+                        <div class="info-card">
+                            <strong>GEOMAGNETIC</strong>
+                            <span>${geomagnetic}</span>
+                        </div>
+
+                    </div>
+                    <div class="info-cards">
+
+    <div class="info-card">
+        <strong>160m</strong>
+        <span>${kc2gData.bands["160m"].s !== null ? "S" + kc2gData.bands["160m"].s : "—"}</span>
+    </div>
+
+    <div class="info-card">
+        <strong>80m</strong>
+        <span>${kc2gData.bands["80m"].s !== null ? "S" + kc2gData.bands["80m"].s : "—"}</span>
+    </div>
+
+    <div class="info-card">
+        <strong>60m</strong>
+        <span>${kc2gData.bands["60m"].s !== null ? "S" + kc2gData.bands["60m"].s : "—"}</span>
+    </div>
+
+    <div class="info-card">
+        <strong>40m</strong>
+        <span>${kc2gData.bands["40m"].s !== null ? "S" + kc2gData.bands["40m"].s : "—"}</span>
+    </div>
+
+    <div class="info-card">
+        <strong>30m</strong>
+        <span>${kc2gData.bands["30m"].s !== null ? "S" + kc2gData.bands["30m"].s : "—"}</span>
+    </div>
+
+    <div class="info-card">
+        <strong>20m</strong>
+        <span>${kc2gData.bands["20m"].s !== null ? "S" + kc2gData.bands["20m"].s : "—"}</span>
+    </div>
+
+    <div class="info-card">
+        <strong>17m</strong>
+        <span>${kc2gData.bands["17m"].s !== null ? "S" + kc2gData.bands["17m"].s : "—"}</span>
+    </div>
+
+    <div class="info-card">
+        <strong>15m</strong>
+        <span>${kc2gData.bands["15m"].s !== null ? "S" + kc2gData.bands["15m"].s : "—"}</span>
+    </div>
+
+    <div class="info-card">
+        <strong>12m</strong>
+        <span>${kc2gData.bands["12m"].s !== null ? "S" + kc2gData.bands["12m"].s : "—"}</span>
+    </div>
+
+    <div class="info-card">
+        <strong>10m</strong>
+        <span>${kc2gData.bands["10m"].s !== null ? "S" + kc2gData.bands["10m"].s : "—"}</span>
+    </div>
+
+</div>
+
+                </div>
+            `;
+
+            screenPrompt.textContent =
+                "NOAA SPACE WEATHER PREDICTION CENTER";
+
+        } catch (error) {
+
+            screenContent.innerHTML = `
+                <div class="section-display">
+
+                    <h2>PROPAGATION INFO</h2>
+
+                    <div class="section-subtitle">
+                        Solar Activity • HF Conditions
+                    </div>
+
+                    <div class="info-cards">
+
+                        <div class="info-card">
+                            <strong>SOLAR FLUX (10.7 cm)</strong>
+                            <span>Unavailable</span>
+                        </div>
+
+                        <div class="info-card">
+                            <strong>K-INDEX</strong>
+                            <span>Unavailable</span>
+                        </div>
+
+                    </div>
+
+                </div>
+            `;
+
+            screenPrompt.textContent =
+                "NOAA DATA UNAVAILABLE";
+
+            console.error(
+                "NOAA propagation data error:",
+                error
+            );
+        }
+
+        return;
+    }
 
     const data =
         islandHFData[section];
